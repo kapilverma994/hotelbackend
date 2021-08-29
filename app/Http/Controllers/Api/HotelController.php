@@ -19,6 +19,18 @@ class HotelController extends Controller
 
     }
 
+    public function gethotelsbyid($id){
+        $data=Hotel::findorfail($id);
+
+
+            $data->image=url('uploads/hotel/'.$data->image);
+            $data->discount_percent=($data->discount_price*100)/$data->price;
+
+
+
+        return response()->json(['status'=>true,'data'=>$data]);
+    }
+
     public function gethotels(){
         $data=Hotel::where('status',1)->get();
         foreach($data as $d){
