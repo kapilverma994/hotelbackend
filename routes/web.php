@@ -7,6 +7,7 @@ use App\Http\Controllers\SizeController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,7 +44,7 @@ Route::get('banner/status/{type}/{id}',[SliderController::class,'status']);
 Route::resource('banner',SliderController::class);
 Route::get('hotel/status/{type}/{id}',[HotelController::class,'status']);
 Route::resource('hotel', HotelController::class);
-
+Route::get('my-profile',[ProfileController::class,'myprofile'])->name('myprofile');
 Route::get('admin/logout',function(){
 session()->forget('ADMIN_LOGIN');
 session()->forget('ADMIN_ID');
