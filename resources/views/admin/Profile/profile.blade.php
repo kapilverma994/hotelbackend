@@ -85,8 +85,9 @@
 
                                 <div class="form-group col-md-8" style="padding: 0">
                                     <label for="exampleInputEmail1">Password</label>
-                                    <input type="text" name="title" class="form-control" id="exampleInputEmail1"
-                                        required aria-describedby="emailHelp" autocomplete="off">
+                                    <input type="password" name="title" value="12345678" class="form-control"
+                                        id="exampleInputEmail1" required aria-describedby="emailHelp"
+                                        autocomplete="off">
                                     @error('title')
                                         <span class="text-danger"> {{ $message }}</span>
 
@@ -158,7 +159,75 @@
 
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Hotel Name</label>
+                                    <input type="text" name="title" class="form-control" id="exampleInputEmail1"
+                                        required aria-describedby="emailHelp" value="" autocomplete="off">
+                                    @error('title')
+                                        <span class="text-danger"> {{ $message }}</span>
 
+                                    @enderror
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Room Starting Price</label>
+                                    <input type="text" name="title" class="form-control" id="exampleInputEmail1"
+                                        required aria-describedby="emailHelp" value="" autocomplete="off">
+                                    @error('title')
+                                        <span class="text-danger"> {{ $message }}</span>
+
+                                    @enderror
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Hotel Main Thumbnail Image</label>
+                                    <input type="file" name="title" class="form-control" id="exampleInputEmail1"
+                                        required aria-describedby="emailHelp" value="" autocomplete="off">
+                                    @error('title')
+                                        <span class="text-danger"> {{ $message }}</span>
+
+                                    @enderror
+
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Other Images</label>
+                                    <input type="file" name="title" class="form-control" id="exampleInputEmail1"
+                                        required aria-describedby="emailHelp" value="" autocomplete="off">
+                                    @error('title')
+                                        <span class="text-danger"> {{ $message }}</span>
+
+                                    @enderror
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Choose Amenities</label>
+                                    <select class="js-example-basic-multiple3 form-control" name="states[]"
+                                        multiple="multiple" required>
+                                        <option value="Parking">Parking</option>
+                                        <option value="Elevator">Elevator</option>
+                                        <option value="AC">AC</option>
+
+                                        <option value="TV">TV</option>
+                                        <option value="Free Wifi">Free Wifi</option>
+                                        <option value="Geyser">Geyser</option>
+
+                                        <option value="Breakfast">Breakfast</option>
+                                        <option value="Lunch">Lunch</option>
+                                        <option value="Dinner">Dinner</option>
+
+                                    </select>
+                                </div>
+
+                            </div>
 
                         </div>
                         <div class="row">
@@ -300,3 +369,11 @@
 
 
 @endsection
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-multiple3').select2();
+    });
+</script>
+
+@endpush

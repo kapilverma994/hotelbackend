@@ -27,7 +27,7 @@
 
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Hotel</h6>
-                        <a class="btn btn-success" href="{{ route('hotel.create') }}">Add Hotel</a>
+                        <a class="btn btn-success" href="{{ route('hotel.create') }}">Add Room</a>
                     </div>
                     <div class="table-responsive p-3">
                         <table class="table align-items-center table-flush table-hover" id="dataTableHover">
@@ -35,8 +35,9 @@
                                 <tr>
                                     <th>Sno</th>
                                     <th>Image</th>
-                                    <th>Name</th>
+                                    <th>Title</th>
                                     <th>Description </th>
+                                    <th>Aminities</th>
                                     <th>Price</th>
                                     <th>Discount Price</th>
                                     <th>Deal</th>
@@ -50,8 +51,9 @@
                                 <tr>
                                     <th>Sno</th>
                                     <th>Image</th>
-                                    <th>Name</th>
+                                    <th>Title</th>
                                     <th>Description </th>
+                                    <th>Aminities</th>
                                     <th>Price</th>
                                     <th>Discount Price</th>
                                     <th>Deal</th>
@@ -69,6 +71,19 @@
                                                 height="100px" alt=""></td>
                                         <td>{{ $item->title }}</td>
                                         <td>{{ $item->description }}</td>
+                                        <td>
+                                            <ul class="hide_style">
+                                                <li>
+                                                    Ac
+                                                </li>
+                                                <li>
+                                                    Tv
+                                                </li>
+                                                <li>
+                                                    Wifi
+                                                </li>
+                                            </ul>
+                                        </td>
                                         <td>{{ $item->price }}</td>
                                         <td>{{ $item->discount_price }}</td>
                                         <td>{{ $item->deal }}</td>

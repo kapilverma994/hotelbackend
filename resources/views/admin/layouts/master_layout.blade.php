@@ -26,7 +26,7 @@
                 href="{{ url('admin/dashboard') }}">
                 <div class="sidebar-brand-icon">
                     {{-- <img src="{{ asset('admin_asset/img/logo/logo2.png') }}"> --}}
-                    <img src="https://posvat.com/img/posvat-logo2.png" alt="">
+                    <img src="https://posvat.com/img/posvat-logo3.png" alt="">
                     {{-- <img src="{{ asset('admin_asset/img/logo/logo2.png') }}"> --}}
                 </div>
                 <div class="sidebar-brand-text mx-3">Merchant Panel</div>
@@ -127,18 +127,18 @@
                 </div>
             </li> --}}
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm3"
                     aria-expanded="true" aria-controls="collapseForm">
-                    <i class="fab fa-fw fa-wpforms"></i>
-                    <span>Hotels</span>
+                    <i class="fas fa-hotel"></i>
+                    <span>Rooms</span>
                 </a>
                 <div id="collapseForm3" class="collapse" aria-labelledby="headingForm"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" href="{{ route('hotel.create') }}">Add Hotel</a>
-                        <a class="collapse-item" href="{{ route('hotel.index') }}">View Hotels</a>
+                        <a class="collapse-item " href="{{ route('hotel.create') }}">Add Room</a>
+                        <a class="collapse-item" href="{{ route('hotel.index') }}">View Rooms</a>
 
                     </div>
                 </div>

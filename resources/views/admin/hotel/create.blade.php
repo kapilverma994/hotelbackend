@@ -1,5 +1,5 @@
 @extends('admin.layouts.master_layout')
-@section('title', 'Add Hotel')
+@section('title', 'Add Room')
 @section('admin_content')
 @section('page_active', 'active')
 
@@ -7,7 +7,7 @@
 
 <div class="container-fluid ">
 
-    <h1>Add Hotel</h1>
+    <h1>Add Room</h1>
     <div class="row mt-5">
 
         <div class="col-lg-12">
@@ -71,68 +71,14 @@
 
                             @enderror
                         </div>
+
+
+
+
+
+
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">City</label>
-                                    <input type="text" name="location" class="form-control" id="exampleInputPassword1"
-                                        autocomplete="off" required>
-                                    @error('city')
-                                        <span class="text-danger"> {{ $message }}</span>
-
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">State</label>
-                                    <input type="text" name="location" class="form-control" id="exampleInputPassword1"
-                                        autocomplete="off" required>
-                                    @error('city')
-                                        <span class="text-danger"> {{ $message }}</span>
-
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Pincode</label>
-                                    <input type="text" name="location" class="form-control" id="exampleInputPassword1"
-                                        autocomplete="off" required>
-                                    @error('city')
-                                        <span class="text-danger"> {{ $message }}</span>
-
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Address</label>
-                                    <textarea name="address" class="form-control" id="" cols="30" rows="5"></textarea>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-
-
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Contact Number</label>
-                                    <input type="text" name="contact_number" class="form-control"
-                                        id="exampleInputPassword1" autocomplete="off" required>
-                                    @error('contact_number')
-                                        <span class="text-danger"> {{ $message }}</span>
-
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Deal</label>
                                     <input type="text" name="deal" class="form-control" id="exampleInputPassword1"
@@ -143,12 +89,7 @@
                                     @enderror
                                 </div>
                             </div>
-
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Price</label>
                                     <input type="text" name="price" class="form-control" id="exampleInputPassword1"
@@ -159,7 +100,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
 
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Discount Price</label>
